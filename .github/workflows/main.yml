@@ -1,7 +1,6 @@
 name: Podman bootc build
 =======
 name: Podman ubild
->>>>>>> 4893a7faa9300f7c833bcf32576b7c9417684e68
   
 on:
   push:
