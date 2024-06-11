@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: srv01
+    runs-on: srv01-mine-01
 
     steps:
     - uses: actions/checkout@v4
