@@ -1,8 +1,4 @@
 name: Podman ubild
-
-env:
-  # Setting an environment variable with the value of a configuration variable
-  env_var: ${{ vars.MINE}}
   
 on:
   push:
@@ -19,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Podman build now
-      run: podman build --build-arg "sshpubkey=${{ env.MY_PUBKEY }}" -f Containerfile -t mine-rhel9-bootc
+      run: podman build -f Containerfile -t mine-rhel9-bootc
