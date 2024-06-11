@@ -1,6 +1,4 @@
 name: Podman bootc build
-=======
-name: Podman ubild
   
 on:
   push:
