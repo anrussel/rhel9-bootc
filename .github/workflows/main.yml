@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Podman build now
-      run: podman build --build-arg "sshpubkey=$(cat id_rsa_mine.pub)" -f Containerfile -t mine-rhel9-bootc
+      run: podman build --build-arg "sshpubkey=$MY_PUBKEY" -f Containerfile -t mine-rhel9-bootc
