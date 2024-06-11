@@ -14,7 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Podman build now
-      run: podman build -f Containerfile -t mine-rhel9-bootc
+      run: podman build -f Containerfile -t quay.io/anrussel/mine-rhel9-bootc
     - name: Login Quay
       run: podman login -u='${{ secrets.QUAY_USERNAME }}' -p='${{ secrets.QUAY_ROBOT_TOKEN }}' quay.io
-
+    - name: Push to Quay
+      run: podman push quay.io/anrussel/mine-rhel9-bootc
