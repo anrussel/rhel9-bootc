@@ -11,5 +11,6 @@ COPY authorized_keys /home/cloud-user/.ssh/authorized_keys
 
 RUN chmod 0600 /home/cloud-user/.ssh/authorized_keys
 RUN chown -R cloud-user: /home/cloud-user/
+RUN chown cloud-user: /home/cloud-user/.ssh/
 
 RUN echo "root:redhat" | chpasswd
