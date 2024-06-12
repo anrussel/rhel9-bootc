@@ -6,4 +6,3 @@ RUN dnf install -y openssh-server && \
 
 ARG rootpw
 RUN echo "root:$rootpw" |chpasswd -e
-RUN echo "$rootpw" > p.txt
