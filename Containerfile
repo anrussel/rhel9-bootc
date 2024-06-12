@@ -4,4 +4,4 @@ RUN dnf install -y openssh-server && \
     dnf clean all && \
     systemctl enable sshd
 
-RUN echo "root:redhat" | chpasswd
+RUN echo "root:$rootpw" |chpasswd -e
