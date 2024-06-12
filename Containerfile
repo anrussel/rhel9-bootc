@@ -4,4 +4,5 @@ RUN dnf install -y openssh-server && \
     dnf clean all && \
     systemctl enable sshd
 
+ARG rootpw
 RUN echo "root:$rootpw" |chpasswd -e
