@@ -3,9 +3,8 @@ name: bootc build
 on:
   push:
     branches: main
-  pull_request:
-    branches: main
-    
+    paths-ignore:
+      - '.github/workflows/**' 
 jobs:
   login:
     runs-on: self-hosted
