@@ -1,4 +1,4 @@
-name: bootc build
+name: bootc build - main
 
 on:
   push:
