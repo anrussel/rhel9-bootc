@@ -9,7 +9,7 @@ on:
     branches: main
 
 jobs:
-  login:
+  build-image:
     runs-on: self-hosted
     steps:
       - name: Login to Quay.io
