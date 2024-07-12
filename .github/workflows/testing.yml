@@ -1,12 +1,10 @@
-name: bootc build - dev
+name: bootc build - testing
 
 on:
   push:
-    branches: dev
-    paths-ignore:
-      - '.github/workflows/**' 
+    branches: testing
   workflow_dispatch:
-    branches: dev
+    branches: testing
 
 jobs:
   build-image:
@@ -32,7 +30,7 @@ jobs:
         uses: redhat-actions/buildah-build@v2
         with:
           image: mine-rhel9-bootc
-          tags: dev ${{ github.sha }}
+          tags: testing ${{ github.sha }}
           containerfiles: |
             ./Containerfile
           build-args: |
