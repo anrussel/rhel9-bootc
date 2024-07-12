@@ -6,7 +6,6 @@ on:
     paths-ignore:
       - '.github/workflows/**' 
   workflow_dispatch:
-    branches: main
 
 jobs:
   build-image:
