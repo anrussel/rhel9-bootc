@@ -4,7 +4,6 @@ on:
   push:
     branches: testing
   workflow_dispatch:
-    branches: testing
 
 jobs:
   build-image:
