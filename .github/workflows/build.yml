@@ -31,7 +31,7 @@ jobs:
         uses: redhat-actions/buildah-build@v2
         with:
           image: ${{ vars.IMAGE_NAME }}
-          tags: ${{ github_ref_name }} ${{ github.sha }}
+          tags: prod ${{ github.sha }}
           containerfiles: |
             ./Containerfile
           build-args: |
