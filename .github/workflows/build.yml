@@ -25,9 +25,6 @@ jobs:
           username: ${{ secrets.RHN_USERNAME }}
           password: ${{ secrets.RHN_ROBOT_TOKEN }}
 
-      - name: Check branch name
-        run: echo "Branch name: ${GITHUB_REF##*/}"
-
       - name: Build Image
         id: build-image
         uses: redhat-actions/buildah-build@v2
