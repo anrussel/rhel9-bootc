@@ -32,4 +32,4 @@ jobs:
       run: echo "Hello ${{ inputs.name }}"
  
     - name: Test
-      run:"${GITHUB_REF##*/}"
+      run: "${GITHUB_REF##*/}"
