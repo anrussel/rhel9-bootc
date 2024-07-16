@@ -29,7 +29,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
- 
-    - name: Test
-      run: "${GITHUB_REF##*/}"
+      run: echo "Hello ${{ inputs.name }} "${GITHUB_REF##*/}"
